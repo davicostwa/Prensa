@@ -1,0 +1,6 @@
+{
+  "name": "Prensa — Impressão Retrô em Tempo Real",
+  "description": "Estúdio minimalista para aplicar efeitos vintage de impressão, serigrafia, risografia e gradient maps em imagens e vídeos com processamento em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

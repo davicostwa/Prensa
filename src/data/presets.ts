@@ -1,0 +1,232 @@
+import { GradientMap, PrintParams, PrintPreset } from '../types/print';
+
+export const DEFAULT_PRINT_PARAMS: PrintParams = {
+  gradientMix: 0.72,
+  halftoneAmount: 0.35,
+  halftoneScale: 120,
+  paperTexture: 0.45,
+  grain: 0.28,
+  inkShift: 0.22,
+  inkWear: 0.25,
+  contrast: 1.12,
+  saturation: 0.92,
+  vignette: 0.2,
+};
+
+export const GRADIENT_MAPS: GradientMap[] = [
+  {
+    id: 'natural',
+    name: 'Cores Originais',
+    subtitle: 'Preserva matizes da mídia',
+    shadow: '#161412',
+    midtone: '#7D766D',
+    highlight: '#F4EFE4',
+    isNatural: true,
+  },
+  {
+    id: 'terracota-cobalto',
+    name: 'Terracota & Cobalto',
+    subtitle: 'Serigrafia clássica 70s',
+    shadow: '#102F7D',
+    midtone: '#C2411C',
+    highlight: '#F5E4C3',
+  },
+  {
+    id: 'ciano-laranja',
+    name: 'Ciano & Laranja',
+    subtitle: 'Cassete analógico vivo',
+    shadow: '#122026',
+    midtone: '#E8541A',
+    highlight: '#7CE3EC',
+  },
+  {
+    id: 'editorial-teal',
+    name: 'Editorial Sépia & Teal',
+    subtitle: 'Impressão de revista retrô',
+    shadow: '#1F3A44',
+    midtone: '#E0692D',
+    highlight: '#ECE3CE',
+  },
+  {
+    id: 'riso-carmim',
+    name: 'Riso Carmim & Índigo',
+    subtitle: 'Duotone em dois tambores',
+    shadow: '#1E1E6B',
+    midtone: '#D93B58',
+    highlight: '#FAF0DE',
+  },
+  {
+    id: 'musgo-ocre',
+    name: 'Musgo & Ocre',
+    subtitle: 'Cartaz botânico vintage',
+    shadow: '#1E3326',
+    midtone: '#B97828',
+    highlight: '#F3E9D2',
+  },
+  {
+    id: 'carvao-jornal',
+    name: 'Carvão & Jornal',
+    subtitle: 'Monocromático em papel pardo',
+    shadow: '#1B1A18',
+    midtone: '#6E695F',
+    highlight: '#ECE5D5',
+  },
+  {
+    id: 'custom',
+    name: 'Personalizado',
+    subtitle: 'Defina suas próprias tintas',
+    shadow: '#19223B',
+    midtone: '#CC4E2B',
+    highlight: '#F5EAD4',
+  },
+];
+
+export const PRINT_PRESETS: PrintPreset[] = [
+  {
+    id: 'serigrafia-70s',
+    name: 'Serigrafia 70s',
+    subtitle: 'Tinta espessa, grão orgânico e desgaste tátil',
+    defaultGradientId: 'terracota-cobalto',
+    params: {
+      gradientMix: 0.86,
+      halftoneAmount: 0.34,
+      halftoneScale: 105,
+      paperTexture: 0.62,
+      grain: 0.36,
+      inkShift: 0.24,
+      inkWear: 0.48,
+      contrast: 1.24,
+      saturation: 0.95,
+      vignette: 0.22,
+    },
+  },
+  {
+    id: 'editorial-classico',
+    name: 'Editorial Clássico',
+    subtitle: 'Papel creme suave, meio-tom fino e cor equilibrada',
+    defaultGradientId: 'editorial-teal',
+    params: {
+      gradientMix: 0.56,
+      halftoneAmount: 0.28,
+      halftoneScale: 145,
+      paperTexture: 0.52,
+      grain: 0.24,
+      inkShift: 0.14,
+      inkWear: 0.18,
+      contrast: 1.1,
+      saturation: 0.88,
+      vignette: 0.16,
+    },
+  },
+  {
+    id: 'cassete-analogico',
+    name: 'Cassete Analógico',
+    subtitle: 'Contraste alto, divisão cromática e brilho quente',
+    defaultGradientId: 'ciano-laranja',
+    params: {
+      gradientMix: 0.68,
+      halftoneAmount: 0.22,
+      halftoneScale: 165,
+      paperTexture: 0.34,
+      grain: 0.32,
+      inkShift: 0.42,
+      inkWear: 0.2,
+      contrast: 1.28,
+      saturation: 1.15,
+      vignette: 0.28,
+    },
+  },
+  {
+    id: 'risografia-duotone',
+    name: 'Risografia Duotone',
+    subtitle: 'Sobreposição de duas tintas com registro deslocado',
+    defaultGradientId: 'riso-carmim',
+    params: {
+      gradientMix: 0.92,
+      halftoneAmount: 0.58,
+      halftoneScale: 96,
+      paperTexture: 0.55,
+      grain: 0.3,
+      inkShift: 0.54,
+      inkWear: 0.36,
+      contrast: 1.18,
+      saturation: 0.92,
+      vignette: 0.12,
+    },
+  },
+  {
+    id: 'jornal-halftone',
+    name: 'Jornal Halftone',
+    subtitle: 'Retícula evidente de alta definição em papel jornal',
+    defaultGradientId: 'carvao-jornal',
+    params: {
+      gradientMix: 0.96,
+      halftoneAmount: 0.82,
+      halftoneScale: 78,
+      paperTexture: 0.68,
+      grain: 0.26,
+      inkShift: 0.12,
+      inkWear: 0.32,
+      contrast: 1.32,
+      saturation: 0.65,
+      vignette: 0.18,
+    },
+  },
+  {
+    id: 'filme-desbotado',
+    name: 'Filme Desbotado',
+    subtitle: 'Cores naturais lavadas, fibra sutil e pretos suaves',
+    defaultGradientId: 'natural',
+    params: {
+      gradientMix: 0.2,
+      halftoneAmount: 0.14,
+      halftoneScale: 175,
+      paperTexture: 0.4,
+      grain: 0.42,
+      inkShift: 0.28,
+      inkWear: 0.14,
+      contrast: 0.96,
+      saturation: 0.78,
+      vignette: 0.3,
+    },
+  },
+];
+
+export interface SampleAsset {
+  id: string;
+  name: string;
+  label: string;
+  kind: 'image' | 'motion-sample';
+  url: string;
+}
+
+export const SAMPLE_ASSETS: SampleAsset[] = [
+  {
+    id: 'sample-slow-sundays',
+    name: 'slow-sundays.png',
+    label: 'Cartaz Café',
+    kind: 'image',
+    url: '/assets/aistudio/image_d3c9089d.png',
+  },
+  {
+    id: 'sample-cassette',
+    name: 'analog-cassette.png',
+    label: 'Vinil & Cassete',
+    kind: 'image',
+    url: '/assets/aistudio/image_3916ad3d.png',
+  },
+  {
+    id: 'sample-no-free-rides',
+    name: 'no-free-rides.png',
+    label: 'Editorial Auto',
+    kind: 'image',
+    url: '/assets/aistudio/image_742440e9.png',
+  },
+  {
+    id: 'sample-motion',
+    name: 'retro-motion-loop.mp4',
+    label: 'Vídeo Motion',
+    kind: 'motion-sample',
+    url: 'procedural://motion-loop',
+  },
+];
